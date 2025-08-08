@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eniola Fashola – Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+    }
+    header, section, footer {
+      margin-bottom: 40px;
+    }
+    header h1 {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 2.5em;
+      color: #2c3e50;
+    }
+    nav a {
+      margin-right: 15px;
+      color: #3498db;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: #2c3e50;
+      border-bottom: 2px solid #ecf0f1;
+      padding-bottom: 5px;
+    }
+    .links a {
+      color: #e74c3c;
+      text-decoration: none;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #3498db;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    /* Download Button */
+    .download-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+    .download-btn:hover {
+      background-color: #217dbb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="image.png" alt="Eniola Fashola" class="profile-pic">
+      <h1>Eniola Fashola</h1>
+      <p>Web & Cross-Platform Mobile App Developer • Marketing Enthusiast</p>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I hold a <strong>BSc in Computer Science</strong> and bring over <strong>2 years of hands-on experience</strong> in building web and mobile apps. I also dove into marketing—bootstrapping my own marketing startup and building its website all by myself.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Highlights</h2>
+      <ul>
+        <li>
+          <strong>Tree™ Marketing (treegotyou.com):</strong> I founded the company and crafted its website personally.
+        </li>
+        <li>
+          <strong>Leads Map:</strong> A functional app currently available on the Google Play Store — check it out at <a href="https://leadsmap.treegotyou.com" class="links">leadsmap.treegotyou.com</a>.
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <ul>
+        <li>📞 WhatsApp: <a href="https://wa.me/2348032404351" class="links">+234 803 240 4351</a></li>
+        <li>📧 Email: <a href="mailto:fasholaeniola111@gmail.com" class="links">fasholaeniola111@gmail.com</a></li>
+        <li>🌐 Website: <a href="https://treegotyou.com" class="links">treegotyou.com</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <button class="download-btn" onclick="downloadPortfolio()">⬇ Download My Portfolio</button>
+      <p>&copy; 2025 Eniola Fashola. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function downloadPortfolio() {
+      const element = document.createElement("a");
+      const file = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
+      element.href = URL.createObjectURL(file);
+      element.download = "Eniola_Fashola_Portfolio.html";
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    }
+  </script>
+</body>
+</html>
